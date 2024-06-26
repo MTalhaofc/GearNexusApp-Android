@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    >
+
+
+
+    <TextView
+        android:id="@+id/update_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Update Coming Soon"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_marginTop="230dp"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:gravity="center" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Stay Tuned!"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:gravity="center" />
+
+</LinearLayout>

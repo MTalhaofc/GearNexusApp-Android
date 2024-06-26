@@ -1,0 +1,18 @@
+<!-- alert_box_button_bg.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Default state (not pressed) -->
+    <item android:state_pressed="false">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/red_alert" /> <!-- Red color when not pressed -->
+            <corners android:radius="15dp" />
+        </shape>
+    </item>
+
+    <!-- Pressed state -->
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/black" /> <!-- Black color when pressed -->
+            <corners android:radius="15dp" />
+        </shape>
+    </item>
+</selector>

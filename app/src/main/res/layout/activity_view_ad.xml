@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="5dp"
+    app:cardUseCompatPadding="true"
+    android:layout_margin="16dp">
+
+<RelativeLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:padding="16dp">
+
+<!-- Image View for Post Image -->
+<ImageView
+    android:id="@+id/viewPostImage"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:layout_marginTop="20dp"
+    android:layout_below="@id/fabClose"
+    android:scaleType="centerCrop"
+
+    android:background="@drawable/image_bg"
+    />
+
+<!-- View Post Text -->
+<TextView
+    android:id="@+id/viewPostTitle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Title"
+    android:textSize="20sp"
+    android:textStyle="bold"
+    android:layout_below="@id/viewPostImage"
+    android:layout_marginTop="16dp" />
+
+<!-- Close Button -->
+<com.google.android.material.floatingactionbutton.FloatingActionButton
+    android:id="@+id/fabClose"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/cross_icon"
+    app:backgroundTint="@color/white"
+    app:fabSize="mini"
+    android:layout_marginTop="16dp"
+    android:layout_marginEnd="16dp" />
+
+<!-- Title for View Post -->
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_toEndOf="@+id/fabClose"
+    android:text="View Ad"
+    android:textSize="24sp"
+    android:layout_marginTop="25dp"
+    android:textStyle="bold"
+    android:textColor="@color/black" />
+
+<!-- Icon for Price -->
+<ImageView
+    android:id="@+id/iconPrice"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/price_icon"
+    android:layout_below="@id/viewPostTitle"
+    android:layout_marginTop="8dp"
+    android:layout_alignParentStart="true"
+    android:layout_marginEnd="8dp" />
+
+<!-- Price TextView -->
+<TextView
+    android:id="@+id/viewPostPrice"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Price"
+    android:textSize="18sp"
+    android:layout_below="@id/viewPostTitle"
+    android:layout_toEndOf="@id/iconPrice"
+    android:layout_marginTop="8dp" />
+
+<!-- Icon for Location -->
+<ImageView
+    android:id="@+id/iconLocation"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/location_icon"
+    android:layout_below="@id/viewPostPrice"
+    android:layout_marginTop="8dp"
+    android:layout_alignParentStart="true"
+    android:layout_marginEnd="8dp" />
+
+<!-- Location TextView -->
+<TextView
+    android:id="@+id/viewPostLocation"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Location"
+    android:textSize="16sp"
+    android:layout_below="@id/viewPostPrice"
+    android:layout_toEndOf="@id/iconLocation"
+    android:layout_marginTop="8dp" />
+
+<!-- Icon for Contact Number -->
+<ImageView
+    android:id="@+id/iconContactNumber"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/contact_icon"
+    android:layout_below="@id/viewPostLocation"
+    android:layout_marginTop="8dp"
+    android:layout_alignParentStart="true"
+    android:layout_marginEnd="8dp" />
+
+<!-- Contact Number TextView -->
+<TextView
+    android:id="@+id/viewPostContactNumber"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Contact Number"
+    android:textSize="16sp"
+    android:layout_below="@id/viewPostLocation"
+    android:layout_toEndOf="@id/iconContactNumber"
+    android:layout_marginTop="8dp" />
+
+<!-- Description TextView -->
+<TextView
+    android:id="@+id/viewPostDetails"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Description"
+    android:textSize="14sp"
+    android:layout_below="@id/viewPostContactNumber"
+    android:layout_marginTop="8dp" />
+
+</RelativeLayout>
+
+    </androidx.cardview.widget.CardView>

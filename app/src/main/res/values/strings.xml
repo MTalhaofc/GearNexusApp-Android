@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">GearNexus</string>
+    <string name="bottom_menu_home">Home</string>
+    <string name="bottom_menu_search">Search</string>
+    <string name="bottom_menu_add_new">Add New</string>
+    <string name="bottom_menu_chats">Chats</string>
+    <string name="bottom_menu_profile">Profile</string>
+    <string name="SignupActivity">Sign Up</string>
+    <string name="LoginActivity">Log In</string>
+    <string name="Username">Username</string>
+    <string name="Email">Email</string>
+    <string name="Password">Password</string>
+    <string name="NewAccount">Don\'t have an Account?</string>
+    <string name="OldAccount">ALready have an Account?</string>
+    <string name="ConfirmPassword">Confirm Password</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
