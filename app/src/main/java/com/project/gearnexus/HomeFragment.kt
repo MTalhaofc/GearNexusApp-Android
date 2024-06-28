@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import android.widget.Toolbar
+import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
@@ -25,9 +27,11 @@ class HomeFragment : Fragment() {
     private var currentUserEmail: String? = null
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+                inflater : LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?,
+    ):
+            View? {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root = binding.root
 

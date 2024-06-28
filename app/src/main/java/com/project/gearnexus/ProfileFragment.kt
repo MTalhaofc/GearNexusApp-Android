@@ -71,6 +71,9 @@ class ProfileFragment : Fragment() {
         val numberUser = intent?.getStringExtra("number")
         val passwordUser = intent?.getStringExtra("password")
 
+
+
+
         titleName.text = nameUser
         titleUsername.text = numberUser
         profileName.text = nameUser
