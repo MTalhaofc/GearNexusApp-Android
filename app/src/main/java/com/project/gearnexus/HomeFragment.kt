@@ -8,6 +8,7 @@ import android.widget.Toast
 import android.widget.Toolbar
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import com.google.firebase.auth.FirebaseAuth
@@ -34,6 +35,7 @@ class HomeFragment : Fragment() {
             View? {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root = binding.root
+        (activity as? AppCompatActivity)?.supportActionBar?.title = "Home"
 
         auth = FirebaseAuth.getInstance()
         databaseReference = FirebaseDatabase.getInstance().getReference("posts")

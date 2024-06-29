@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
@@ -30,6 +31,7 @@ class AddNewFragment : Fragment() {
     ): View? {
         binding = FragmentAddNewBinding.inflate(inflater, container, false)
         val root = binding.root
+        (activity as? AppCompatActivity)?.supportActionBar?.title = "Upload Your Ad"
 
         auth = FirebaseAuth.getInstance()
         databaseReference = FirebaseDatabase.getInstance().getReference("posts")

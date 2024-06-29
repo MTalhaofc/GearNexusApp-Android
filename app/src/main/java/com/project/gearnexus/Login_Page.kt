@@ -2,17 +2,20 @@ package com.project.gearnexus
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.Window
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.database.*
 import com.project.gearnexus.databinding.ActivityLoginPageBinding
 
 class Login_Page : AppCompatActivity() {
+
     private lateinit var binding: ActivityLoginPageBinding
     private lateinit var database: FirebaseDatabase
     private lateinit var reference: DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        supportRequestWindowFeature(Window.FEATURE_NO_TITLE)
         super.onCreate(savedInstanceState)
         binding = ActivityLoginPageBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -74,16 +77,20 @@ class Login_Page : AppCompatActivity() {
                     if (passwordFromDB == userPassword) {
                         binding.etUserEmail.error = null
 
+                        val userId = userSnapshot.child("userid").getValue(String::class.java)
                         val nameFromDB = userSnapshot.child("name").getValue(String::class.java)
                         val emailFromDB = userSnapshot.child("email").getValue(String::class.java)
                         val numberFromDB = userSnapshot.child("number").getValue(String::class.java)
+                        val profileImageUrl = userSnapshot.child("profileimage").getValue(String::class.java)
 
                         // Start Fragments activity with user data
                         val intent = Intent(this@Login_Page, Fragments::class.java)
+                        intent.putExtra("userId", userId)
                         intent.putExtra("name", nameFromDB)
                         intent.putExtra("email", emailFromDB)
                         intent.putExtra("number", numberFromDB)
                         intent.putExtra("password", passwordFromDB)
+                        intent.putExtra("profileImageUrl", profileImageUrl)
                         startActivity(intent)
 
                         binding.etUserEmail.text.clear()

@@ -35,8 +35,10 @@ class Update_Ad : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         binding = ActivityUpdateAdBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
 
         storageReference = FirebaseStorage.getInstance().reference.child("images")
 
