@@ -77,11 +77,11 @@ class Login_Page : AppCompatActivity() {
                     if (passwordFromDB == userPassword) {
                         binding.etUserEmail.error = null
 
-                        val userId = userSnapshot.child("userid").getValue(String::class.java)
+                        val userId = userSnapshot.key
                         val nameFromDB = userSnapshot.child("name").getValue(String::class.java)
                         val emailFromDB = userSnapshot.child("email").getValue(String::class.java)
                         val numberFromDB = userSnapshot.child("number").getValue(String::class.java)
-                        val profileImageUrl = userSnapshot.child("profileimage").getValue(String::class.java)
+                        val profileImageUrl = userSnapshot.child("profileImageUrl").getValue(String::class.java)
 
                         // Start Fragments activity with user data
                         val intent = Intent(this@Login_Page, Fragments::class.java)

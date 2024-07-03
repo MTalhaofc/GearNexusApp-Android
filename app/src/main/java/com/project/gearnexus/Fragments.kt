@@ -1,6 +1,5 @@
 package com.project.gearnexus
 
-
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -20,6 +19,28 @@ class Fragments : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityFragmentsBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val userId = intent.getStringExtra("userId")
+        val name = intent.getStringExtra("name")
+        val email = intent.getStringExtra("email")
+        val number = intent.getStringExtra("number")
+        val password = intent.getStringExtra("password")
+        val profileImageUrl = intent.getStringExtra("profileImageUrl")
+
+        // Create a bundle to pass data to fragment
+        val bundle = Bundle().apply {
+            putString("userId", userId)
+            putString("name", name)
+            putString("email", email)
+            putString("number", number)
+            putString("password", password)
+            putString("profileImageUrl", profileImageUrl)
+        }
+
+        // Load the profile fragment and pass the bundle
+        val profileFragment = ProfileFragment().apply {
+            arguments = bundle
+        }
 
         bottomNavigationView = findViewById(R.id.main_bottom_menu)
         bottomNavigationView.setOnNavigationItemSelectedListener { menuItem ->
@@ -41,7 +62,7 @@ class Fragments : AppCompatActivity() {
                     true
                 }
                 R.id.bottom_profile -> {
-                    supportFragmentManager.beginTransaction().replace(R.id.main, ProfileFragment()).commit()
+                    supportFragmentManager.beginTransaction().replace(R.id.main, profileFragment).commit()
                     true
                 }
                 else -> false

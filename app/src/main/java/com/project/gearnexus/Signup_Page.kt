@@ -86,7 +86,7 @@ class Signup_Page : AppCompatActivity() {
                                 binding.etUserPass.text.clear()
                                 binding.uploadedImage.setImageResource(0)
 
-                                finish() // Optional: Finish the activity after signup
+                                finish()
                             } else {
                                 Toast.makeText(this, "Failed to sign up. Please try again later.", Toast.LENGTH_SHORT).show()
                             }
