@@ -1,0 +1,132 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black">
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/cross_icon"
+        app:backgroundTint="@color/white"
+        app:fabSize="mini"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="16dp" />
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:src="@drawable/bg_profile_fragment"
+
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+
+        android:layout_centerHorizontal="true"
+        android:text="Contact Us"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp">
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="120dp"
+        android:src="@drawable/profile_picture_contact_us" />
+
+    <ImageView
+        android:layout_width="155dp"
+        android:layout_height="155dp"
+        android:layout_marginTop="-275dp"
+        android:src="@drawable/profile_image_border" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:text="Software Engineer | Android Developer | Laravel"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/btn_email"
+        style="@style/RoundedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/gmailRed"
+        android:clipToOutline="true"
+        android:outlineProvider="background"
+        android:text="Email"
+        android:textColor="@color/white"
+        android:drawableStart="@drawable/main_icon_contactus" />
+
+    <Button
+        android:id="@+id/btn_linkedin"
+        style="@style/RoundedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/linkedinBlue"
+        android:clipToOutline="true"
+        android:outlineProvider="background"
+        android:text="LinkedIn"
+        android:textColor="@color/white"
+        android:drawableStart="@drawable/linkedin_icon_contact" />
+
+    <Button
+        android:id="@+id/btn_github"
+        style="@style/RoundedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/githubBlack"
+        android:clipToOutline="true"
+        android:outlineProvider="background"
+        android:text="GitHub"
+        android:textColor="@color/white"
+        android:drawableStart="@drawable/github_icon_contactus" />
+
+    <Button
+        android:id="@+id/btn_portfolio"
+        style="@style/RoundedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/portfolioGreen"
+        android:clipToOutline="true"
+        android:outlineProvider="background"
+        android:text="Portfolio"
+        android:textColor="@color/white"
+        android:drawableStart="@drawable/portfolio_icon_contactus" />
+
+
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:text="@string/passionate_developer_with_expertise_in_android_laravel_and_modern_software_engineering_practices"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="90dp"
+
+        />
+</RelativeLayout>

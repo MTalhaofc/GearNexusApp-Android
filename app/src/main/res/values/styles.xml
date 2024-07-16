@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <style name="RoundedButton" parent="Widget.MaterialComponents.Button">
+        <item name="shapeAppearanceOverlay">@style/RoundedCornersOverlay</item>
+    </style>
+
+    <style name="RoundedCornersOverlay">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">300dp</item>
+    </style>
+
+
+</resources>

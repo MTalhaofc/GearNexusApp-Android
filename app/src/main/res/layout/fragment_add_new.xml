@@ -1,82 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    app:cardCornerRadius="16dp"
-    app:cardElevation="4dp"
-    app:cardUseCompatPadding="true"
-    android:layout_margin="16dp">
+    android:layout_height="match_parent">
 
-    <LinearLayout
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="16dp">
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Upload Your AD"
-    android:layout_gravity="center"
-    android:textStyle="bold"
-    android:textSize="16sp"
+        android:layout_height="120dp"
+        android:src="@drawable/bg_profile_fragment" />
 
-    />
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        app:cardUseCompatPadding="true"
+        android:layout_margin="16dp">
 
-        <ImageView
-            android:id="@+id/uploadedImage"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_marginTop="5dp"
-            android:background="@android:color/darker_gray"
-            android:scaleType="centerCrop" />
+            android:layout_height="wrap_content">
 
-        <Button
-            android:id="@+id/imageUploadButton"
-            android:layout_width="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_height="wrap_content"
-            android:text="Upload Image" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
 
-        <EditText
-            android:id="@+id/nameInput"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Name" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Upload Your AD"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="18sp" />
 
-        <EditText
-            android:id="@+id/priceInput"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Price" />
+                <ImageView
+                    android:id="@+id/uploadedImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@android:color/darker_gray"
+                    android:scaleType="centerCrop" />
 
-        <EditText
-            android:id="@+id/detailsInput"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Details" />
+                <Button
+                    android:id="@+id/imageUploadButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Upload Image"
+                    android:layout_marginTop="5dp" />
 
-        <EditText
-            android:id="@+id/locationInput"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Location"
-            android:layout_marginBottom="16dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Car Name" />
 
-        <EditText
-            android:id="@+id/contactNumberInput"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Contact Number"
-            android:inputType="phone"
-            android:layout_marginBottom="16dp" />
+                <EditText
+                    android:id="@+id/nameInput"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/input_bg"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Car Name"
+                    android:layout_marginBottom="8dp" />
 
-        <Button
-            android:id="@+id/saveButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Save" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Price" />
 
-    </LinearLayout>
+                <EditText
+                    android:id="@+id/priceInput"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/input_bg"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Price"
+                    android:layout_marginBottom="8dp" />
 
-</androidx.cardview.widget.CardView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Details" />
+
+                <EditText
+                    android:id="@+id/detailsInput"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/input_bg"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Details"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Location" />
+
+                <EditText
+                    android:id="@+id/locationInput"
+                    android:background="@drawable/input_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Your Location"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Contact Number" />
+
+                <EditText
+                    android:id="@+id/contactNumberInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_bg"
+                    android:hint="Enter Contact Number"
+                    android:inputType="phone"
+                    android:layout_marginBottom="16dp" />
+
+                <Button
+                    android:id="@+id/saveButton"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:text="Upload Your AD" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_marginTop="16dp" />
+            </LinearLayout>
+        </ScrollView>
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

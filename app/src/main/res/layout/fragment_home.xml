@@ -6,7 +6,23 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:background="@color/white"
+
+
+
     >
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:src="@drawable/bg_profile_fragment"
+        />
+
     <TextView
         android:id="@+id/textMyAds"
         android:layout_width="wrap_content"
@@ -14,13 +30,15 @@
         android:text="My Ads"
         android:textSize="24sp"
         android:textStyle="bold"
+        android:textColor="@color/white"
         android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"/>
+        android:layout_marginStart="26dp"/>
 <ImageView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
    android:src="@drawable/notification_icon"
     android:layout_toRightOf="@id/textMyAds"
+    android:id="@+id/notificationIcon"
     android:layout_marginStart="240dp"
     android:layout_marginTop="20dp"
     />
@@ -35,16 +53,7 @@
         android:layout_marginEnd="10dp"
         android:scrollbars="vertical" />
 
-<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
-<!--        android:id="@+id/fab"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_alignParentBottom="true"-->
-<!--        android:layout_alignParentEnd="true"-->
-<!--        android:layout_margin="16dp"-->
-<!--        android:src="@drawable/ic_add"-->
-<!--        app:tint="@android:color/white" />-->
-<!--    android:layout_above="@id/fab"-->
+</RelativeLayout>
 
 
 </RelativeLayout>

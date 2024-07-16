@@ -5,29 +5,52 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    android:padding="16dp">
-
+    >
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:src="@drawable/bg_profile_fragment" />
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="10dp"
-        app:cardCornerRadius="10dp"
+        app:cardCornerRadius="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="-270dp"
+
+        android:layout_marginBottom="30dp"
         app:cardElevation="20dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
             android:orientation="vertical"
-            android:padding="24dp">
+
+            android:padding="24dp"
+            >
+
+
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:text="Edit Profile"
+
                 android:textAlignment="center"
-                android:textSize="36sp"
+                android:textSize="25sp"
+
                 android:textStyle="bold" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-40dp"
+                app:backgroundTint="@android:color/white"
+                app:fabCustomSize="36dp"
+            app:srcCompat="@drawable/back_button_cross" />
 
             <ImageView
                 android:id="@+id/profileImage"
@@ -35,9 +58,17 @@
 
                 android:layout_height="100dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="16dp"
-
+                android:layout_marginTop="-0dp"
+android:background="@drawable/image_bg"
                 app:srcCompat="@drawable/no_image" />
+
+            <ImageView
+                android:layout_width="105dp"
+
+                android:layout_height="105dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="-100dp"
+                android:src="@drawable/profile_image_border_black" />
 
             <Button
                 android:id="@+id/changeImageButton"
@@ -45,7 +76,17 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="8dp"
-                android:text="Change Image" />
+                android:text="Selct New Image" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Change Name"
+                android:textColor="@color/black"
+
+                android:textStyle="bold"
+                android:layout_marginTop="7dp"
+                />
 
             <EditText
                 android:id="@+id/editName"
@@ -53,37 +94,68 @@
                 android:layout_height="50dp"
                 android:layout_marginTop="10dp"
                 android:drawablePadding="8dp"
+                android:background="@drawable/input_bg"
+                android:elevation="25dp"
                 android:hint="Name"
                 android:padding="8dp"
                 android:textColor="@color/black" />
-
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Update Email"
+                android:textStyle="bold"
+android:textColor="@color/black"
+                android:layout_marginTop="7dp"
+                />
             <EditText
                 android:id="@+id/editEmail"
                 android:layout_width="match_parent"
+                android:background="@drawable/input_bg"
                 android:layout_height="50dp"
                 android:layout_marginTop="10dp"
                 android:drawablePadding="8dp"
                 android:hint="Email"
                 android:padding="8dp"
                 android:textColor="@color/black" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Change Number"
+                android:textStyle="bold"
+                android:layout_marginTop="7dp"
+
+                android:textColor="@color/black"
+                />
 
             <EditText
                 android:id="@+id/editnumber"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:drawablePadding="8dp"
+                android:background="@drawable/input_bg"
+
                 android:hint="Number"
                 android:padding="8dp"
                 android:textColor="@color/black" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enter New Password"
+                android:textStyle="bold"
+                android:layout_marginTop="7dp"
+                android:textColor="@color/black"
 
+                />
             <EditText
                 android:id="@+id/editPassword"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:drawablePadding="8dp"
                 android:hint="Password"
+                android:background="@drawable/input_bg"
+
                 android:inputType="textPassword"
                 android:padding="8dp"
                 android:textColor="@color/black" />
@@ -91,21 +163,24 @@
             <Button
                 android:id="@+id/saveButton"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="50dp"
                 android:layout_marginTop="10dp"
-                android:text="Save"
+                android:text="Update Profile"
                 android:textSize="18sp"
-                app:cornerRadius="20dp" />
+                app:cornerRadius="7dp" />
 
-            <Button
-                android:id="@+id/backButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="Back"
-                android:textSize="18sp"
-                app:cornerRadius="20dp" />
+
 
         </LinearLayout>
+
     </androidx.cardview.widget.CardView>
+<!--    <ImageView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="250dp"-->
+<!--        android:layout_marginTop="-250dp"-->
+<!--        android:src="@drawable/bg_chats_fragment"-->
+
+
+<!--        />-->
+
 </LinearLayout>

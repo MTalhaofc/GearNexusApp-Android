@@ -8,5 +8,9 @@ data class Post(
     var price: String? = null,  // Price of the item in the post
     var details: String? = null,  // Details of the item in the post
     var location: String? = null,  // Location where the item is available
-    var contactNumber: String? = null  // Contact number for the item in the post
+    var contactNumber: String? = null , // Contact number for the item in the post
+    var postuserId: String? = null,  // ID of the user who posted the ad
+    var username : String? = null,
+    var timestamp: Long? = null  ,// Timestamp of the post
+    var userprofileimageurl: String? = null  // URL of the user's profile image
 )

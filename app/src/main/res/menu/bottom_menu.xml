@@ -15,7 +15,7 @@
         android:title="@string/bottom_menu_add_new" />
     <item
         android:id="@+id/bottom_chat"
-        android:icon="@drawable/chat_icon"
+        android:icon="@drawable/phone_icon"
         android:title="@string/bottom_menu_chats" />
     <item
         android:id="@+id/bottom_profile"

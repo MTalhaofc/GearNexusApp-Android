@@ -84,13 +84,14 @@ class Login_Page : AppCompatActivity() {
                         val profileImageUrl = userSnapshot.child("profileImageUrl").getValue(String::class.java)
 
                         // Start Fragments activity with user data
-                        val intent = Intent(this@Login_Page, Fragments::class.java)
-                        intent.putExtra("userId", userId)
-                        intent.putExtra("name", nameFromDB)
-                        intent.putExtra("email", emailFromDB)
-                        intent.putExtra("number", numberFromDB)
-                        intent.putExtra("password", passwordFromDB)
-                        intent.putExtra("profileImageUrl", profileImageUrl)
+                        val intent = Intent(this@Login_Page, Fragments::class.java).apply {
+                            putExtra("userId", userId)
+                            putExtra("name", nameFromDB)
+                            putExtra("email", emailFromDB)
+                            putExtra("number", numberFromDB)
+                            putExtra("password", passwordFromDB)
+                            putExtra("profileImageUrl", profileImageUrl)
+                        }
                         startActivity(intent)
 
                         binding.etUserEmail.text.clear()

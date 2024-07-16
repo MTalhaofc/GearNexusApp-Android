@@ -85,13 +85,18 @@ class Update_Ad : AppCompatActivity() {
 
         if (name.isNotEmpty() && price.isNotEmpty() && details.isNotEmpty() && location.isNotEmpty() && contactNumber.isNotEmpty()) {
             if (selectedImageUri != null) {
-                uploadImageAndUpdatePost(name, price, details, location, contactNumber)
+                uploadImageAndUpdatePost(title.toString(), price, details, location, contactNumber)
             } else {
                 val databaseReference = FirebaseDatabase.getInstance().getReference("posts").child(postId!!)
                 databaseReference.addListenerForSingleValueEvent(object : ValueEventListener {
                     override fun onDataChange(snapshot: DataSnapshot) {
                         val imageUrl = snapshot.child("imageUrl").getValue(String::class.java)
-                        val updatedPost = Post(postId, null, imageUrl, name, price, details, location, contactNumber)
+                        val updatedPost = imageUrl?.let {
+                            Post(
+                                postId!!,
+                                null.toString(), it,
+                                title.toString(), price, details, location, contactNumber)
+                        }
                         databaseReference.setValue(updatedPost).addOnCompleteListener { task ->
                             if (task.isSuccessful) {
                                 Toast.makeText(this@Update_Ad, "Post updated successfully", Toast.LENGTH_SHORT).show()
@@ -112,13 +117,17 @@ class Update_Ad : AppCompatActivity() {
         }
     }
 
-    private fun uploadImageAndUpdatePost(name: String, price: String, details: String, location: String, contactNumber: String) {
+    private fun uploadImageAndUpdatePost(title: String, price: String, details: String, location: String, contactNumber: String) {
         val imageRef = storageReference.child("$postId.jpg")
         imageRef.putFile(selectedImageUri!!)
             .addOnSuccessListener {
                 imageRef.downloadUrl.addOnSuccessListener { uri ->
                     val imageUrl = uri.toString()
-                    val updatedPost = Post(postId, null, imageUrl, name, price, details, location, contactNumber)
+                    val updatedPost = postId?.let { it1 ->
+                        Post(
+                            it1,
+                            null.toString(), imageUrl, title, price, details, location, contactNumber)
+                    }
                     val databaseReference = FirebaseDatabase.getInstance().getReference("posts").child(postId!!)
                     databaseReference.setValue(updatedPost).addOnCompleteListener { task ->
                         if (task.isSuccessful) {

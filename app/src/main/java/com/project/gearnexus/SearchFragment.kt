@@ -8,8 +8,8 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.*
+import com.project.gearnexus.HelperClass
 import com.project.gearnexus.adapters.PostAdapter
 import com.project.gearnexus.databinding.FragmentSearchBinding
 import com.project.gearnexus.models.Post
@@ -28,7 +28,9 @@ class SearchFragment : Fragment() {
     ): View? {
         binding = FragmentSearchBinding.inflate(inflater, container, false)
         val root = binding.root
-        (activity as? AppCompatActivity)?.supportActionBar?.title = "Search Ads"
+        val activity = activity
+              (activity as? AppCompatActivity)?.supportActionBar?.hide()
+
 
         databaseReference = FirebaseDatabase.getInstance().getReference("posts")
         postList = mutableListOf()
@@ -43,7 +45,7 @@ class SearchFragment : Fragment() {
                 for (itemSnapshot in snapshot.children) {
                     val post = itemSnapshot.getValue(Post::class.java)
                     post?.let {
-                        it.postId = itemSnapshot.key
+                        it.postId = itemSnapshot.key.toString()
                         postList.add(it)
                     }
                 }
@@ -73,9 +75,9 @@ class SearchFragment : Fragment() {
 
     private fun filterPosts(query: String?) {
         val filteredList = mutableListOf<Post>()
-        postList.forEach { post ->
-            if (post.name?.toLowerCase()?.contains(query?.toLowerCase() ?: "") == true) {
-                filteredList.add(post)
+        postList.forEach { Post ->
+            if (Post.name?.toLowerCase()?.contains(query?.toLowerCase() ?: "") == true) {
+                filteredList.add(Post)
             }
         }
         postAdapter.updateList(filteredList)

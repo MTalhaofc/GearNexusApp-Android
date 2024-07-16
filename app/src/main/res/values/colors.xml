@@ -5,5 +5,8 @@
     <color name="gray">#7E7C7C</color>
     <color name="red_alert">#F10808</color>
     <color name="dark_gray">#4B4848</color>
-
+    <color name="gmailRed">#D44638</color>
+    <color name="linkedinBlue">#0077B5</color>
+    <color name="githubBlack">#24292E</color>
+    <color name="portfolioGreen">#419D45</color>
 </resources>

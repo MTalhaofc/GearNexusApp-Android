@@ -11,6 +11,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 import com.google.firebase.database.FirebaseDatabase
 import com.project.gearnexus.R
 import com.project.gearnexus.Update_Ad
@@ -125,8 +126,11 @@ class PostAdapter(
                 postTitle.text = post.name
                 postPrice.text = post.price
                 postDetails.text = post.details
+                PostUserName.text = post.username
+                Glide.with(root.context).load(post.userprofileimageurl).apply(RequestOptions.circleCropTransform()).into(PostuserProfileImage)
                 postLocation.text = post.location
                 postContactNumber.text = post.contactNumber
+
                 Glide.with(root.context).load(post.imageUrl).into(postImage)
                 if (showButtons) {
                     updateButton.visibility = View.VISIBLE
